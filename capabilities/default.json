@@ -1,0 +1,16 @@
+{
+  "identifier": "default",
+  "description": "Default capabilities for print agent",
+  "windows": ["*"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-show",
+    "core:window:allow-hide",
+    "core:window:allow-close",
+    "core:window:allow-set-focus",
+    "shell:allow-execute",
+    "shell:allow-open",
+    "store:default",
+    "autostart:default"
+  ]
+}

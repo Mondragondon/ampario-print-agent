@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicegui/tauri/dev/crates/tauri-schema-generator/schemas/config.schema.json",
+  "identifier": "de.ampario.print-agent",
+  "productName": "AMPARIO Print Agent",
+  "version": "0.1.0",
+  "build": {
+    "frontendDist": "./ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "trayIcon": {
+      "iconPath": "icons/tray-icon.png",
+      "iconAsTemplate": true,
+      "tooltip": "AMPARIO Print Agent"
+    },
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "settings",
+        "title": "AMPARIO Print Agent",
+        "url": "index.html",
+        "width": 520,
+        "height": 480,
+        "resizable": false,
+        "visible": false,
+        "center": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "12.0"
+    },
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    },
+    "linux": {
+      "deb": {
+        "depends": ["libcups2"]
+      }
+    }
+  }
+}
